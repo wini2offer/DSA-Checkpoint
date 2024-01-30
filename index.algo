@@ -1,0 +1,19 @@
+ALGORITHM sum_of_distinct_elements
+VAR
+    set1, set2, combined_list, distinct_elements : ARRAY OF INTEGER;
+    sum_result : INTEGER := 0;
+BEGIN
+    set1 := [3, 1, 7, 9];          // Set 1
+    set2 := [2, 4, 1, 9, 3];       // Set 2
+
+    // Combine the two sets to get a list of all elements
+    combined_list := set1 + set2;
+
+    // Use a set to remove duplicates and get distinct elements
+    distinct_elements := SetOf(combined_list);
+
+    // Calculate the sum of distinct elements
+    sum_result := SumOf(distinct_elements);
+
+    Write(sum_result);             // Print the sum
+END
